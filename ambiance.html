@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Bro Editor</title>
+<style type="text/css" media="screen">
+body {
+	overflow: hidden;
+}
+
+#editor {
+	position: absolute;
+	width: 800px;
+	height: 400px;
+}
+</style>
+</head>
+<body>
+<p>
+	<a href="index.html">XCode</a> | 
+	Ambiance | 
+	<a href="cobalt.html">Cobalt</a> | 
+	<a href="eclipse.html">Eclipse</a> | 
+	<a href="textmate.html">Textmate</a> | 
+	<a href="twilight.html">Twilight</a> 
+</p>	
+	<pre id="editor">event bro_init()
+	{
+	print "Hello, World!";
+	}
+
+event bro_done()
+	{
+	print "Goodbye, World!";
+	}</pre>
+<script src="src-noconflict/ace.js" type="text/javascript"
+	charset="utf-8"></script>
+<script type="text/javascript">
+	var editor = ace.edit("editor");
+	editor.setTheme("ace/theme/ambiance");
+	editor.session.setMode("ace/mode/bro");
+</script>
+
+
+
+</body>
+</html>
